@@ -1,0 +1,16 @@
+.content {
+    flex-grow: 6;
+    margin: 30px;
+    
+}
+
+.content p{
+    padding-left:1em; 
+    text-indent :3em;
+}
+  
+.content #performanceTitle{
+    margin: 30px;
+    margin-left: 25%;
+}
+

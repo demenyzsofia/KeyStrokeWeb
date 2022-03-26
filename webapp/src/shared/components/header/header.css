@@ -1,0 +1,14 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 24px;
+    background-color: white;
+    
+  }
+
+  .header img {
+    height: 122px;
+    padding-top: 20px;
+    padding-left: 20px;
+  }

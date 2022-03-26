@@ -1,0 +1,2 @@
+docker build -t zsofi25/reactwebapp .
+docker push zsofi25/reactwebapp

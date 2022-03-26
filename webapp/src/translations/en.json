@@ -1,0 +1,26 @@
+{
+    "pages": { 
+        "home": {
+            "title": "Webalkalmazás célja" ,
+            "introduction": "Az alkalmazás célja, hogy a felhasználó betekintést nyerjen a mesterséges intelligencia, azon belül a gépi tanulás világába. Ez a kis oldal szemlélteni a jelszó gépelési ritmusok különböző detektorokkal való tanításának eredményességét.",
+            "content": "Öt adathalmaz áll rendelkezésünkre, melyek különböző számú felhasználó adatait tartalmazzák. Ezekről az adathalmazokról bővebben olvashatszt az Adathalmazok menüpont alatt. A felhasználó tehát öt adathalmazból választhatja ki, hogy a továbbiakban melyikkel szeretne dolgozni, melyiket szeretné megtekinteni. Ezt követően két fő funkcionalitást tudunk elkülöníteni, melyek további lehetőségeket biztosítanak az alfunkcionalitások megtekintésére, kipróbálására. Ez a két fő egység:", 
+            "listing": {
+                "first": "1. Adatelemzési funkcionalitás",
+                "second": "2. Teljesítményelemzés"
+            },
+            "end": "Az adatelemzési funkcionalitás lehetőséget ad az előre kiválasztott adathalmaz megtekintésére, vizualizációjára. A felhasználó különböző diagramokat tekinthet meg az adott halmazról (vonaldiagramok, hisztogramok, claszterek). Ezek a diagramok tükrözik az összes user teljesítményét; akadnak olyanok, amelyek felhasználóra szabottak és csupán egy felhasználó teljesítményről adnak információt. Egyes adathalmazoknál ezek a diagramok előre el vannak készítve, míg másoknál helyben generálódnak. A teljesítményelemzés opciónál a felhasználó kiválaszthatja a neki tetsző detektort és megnézheti annak teljesítményét: boxplot a detektor által számított AUC és EER értékekből; ROC görbe; a detektor által számított értékek egyes felhasználóknál."
+        }
+
+    },
+
+    "shared": {
+        "buttons": {
+            "next": "kovetkezo"
+        },
+        "menu": {
+            
+        }
+    }
+
+    
+}

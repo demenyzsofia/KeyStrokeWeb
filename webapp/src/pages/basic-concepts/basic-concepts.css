@@ -1,0 +1,30 @@
+.content {
+    flex-grow: 6;
+    margin: 30px;
+    
+  }
+  
+.content #basic{
+    margin: 30px;
+    margin-left: 25%;
+}
+
+.content p{
+    padding: 10px;
+}
+
+.concepts, .notation{
+    margin: 30px;
+    margin-left: 10%;
+}
+
+.subtitle{
+    font-size: 20px;
+}
+
+.concepts li, .notation li{
+    margin: 10px;
+}
+
+  
+  
