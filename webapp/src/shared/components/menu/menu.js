@@ -16,9 +16,9 @@ const Menu = () => {
                     <li>
                         <a href="/basic-concepts">Alapfogalmak</a>
                     </li>
-                    <li>
+                    {/* <li>
                         <a href="/python-basics">Python alapok</a>
-                    </li>
+                    </li> */}
                     <li>
                         <a href="/data-analysis">Adatelemzés</a>
                     </li>

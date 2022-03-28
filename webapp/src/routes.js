@@ -14,7 +14,7 @@ const renderRoutes = () => {
         <Route path="/" element={<DefaultLayout><Home/></DefaultLayout>} />
         <Route path="/datasets" element={<DefaultLayout><Datasets/></DefaultLayout>} />
         <Route path="/basic-concepts" element={<DefaultLayout><BasicConcepts/></DefaultLayout>} />
-        <Route path="/python-basics" element={<DefaultLayout><PythonBasics/></DefaultLayout>} />
+        {/* <Route path="/python-basics" element={<DefaultLayout><PythonBasics/></DefaultLayout>} /> */}
         <Route path="/data-analysis" element={<DefaultLayout><DataAnalysis/></DefaultLayout>} />
         <Route path="/performance-analysis" element={<PerformanceLayout><PerformanceAnalysis/></PerformanceLayout>} />
     </Routes>
