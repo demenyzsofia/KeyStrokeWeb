@@ -1,0 +1,23 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build-api:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the API Docker image
+    - run: cd api
+    - run: docker build . --file Dockerfile --tag zsofi25/keystroke-api:latest
+  build-webapp:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the Webapp Docker image
+    - run: cd webapp
+    - run: docker build . --file Dockerfile --tag zsofi25/keystroke-api:latest
