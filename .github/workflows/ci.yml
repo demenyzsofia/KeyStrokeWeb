@@ -11,26 +11,23 @@ env:
   DOCKER_HUB_PASSWORD: ${{ secrets.DOCKER_HUB_PASSWORD }}
 
 jobs:
-  build-api:
+  build-and-push-api:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
     - name: Build the API Docker image
       run: cd api && docker build . --file Dockerfile --tag $DOCKER_HUB_USER/keystroke-api:latest
-  build-webapp:
+    - name: Login to Docker HUB
+      run: docker login -u $DOCKER_HUB_USER -p $DOCKER_HUB_PASSWORD
+    - name: Push API to Docker HUB
+      run: docker push $DOCKER_HUB_USER/keystroke-api:latest
+  build-and-push-webapp:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
     - name: Build the Webapp Docker image
       run: cd webapp && docker build . --file Dockerfile --tag $DOCKER_HUB_USER/keystroke-webapp:latest
-  push-images:
-    needs: [build-api, build-webapp]
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
     - name: Login to Docker HUB
       run: docker login -u $DOCKER_HUB_USER -p $DOCKER_HUB_PASSWORD
-    - name: Push API to Docker HUB
-      run: docker push $DOCKER_HUB_USER/keystroke-api:latest
     - name: Push Webapp to Docker HUB
       run: docker push $DOCKER_HUB_USER/keystroke-webapp:latest
