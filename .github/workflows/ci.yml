@@ -7,8 +7,8 @@ on:
     branches: [ master ]
 
 env:
-  DOCKER_HUB_USER: ${{ secrets.DOCKER_HUB_USER }}
-  DOCKER_HUB_PASSWORD: ${{ secrets.DOCKER_HUB_PASSWORD }}
+  DOCKER_HUB_USER: zsofi25
+  DOCKER_HUB_PASSWORD: JkLxas25W
 
 jobs:
   build-and-push-api:
