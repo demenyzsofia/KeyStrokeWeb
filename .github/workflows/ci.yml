@@ -7,8 +7,8 @@ on:
     branches: [ master ]
 
 env:
-  DOCKER_HUB_USER: zsofi25
-  DOCKER_HUB_PASSWORD: JkLxas25W
+  DOCKER_HUB_USER: ${{ secrets.DOCKER_HUB_USER }}
+  DOCKER_HUB_PASSWORD: ${{ secrets.DOCKER_HUB_PASSWORD }}
 
 jobs:
   build-api:
@@ -16,13 +16,13 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the API Docker image
-      run: cd api && docker build . --file Dockerfile --tag $DOCKER_HUB_USER/keystroke-api:latest && cd /var/lib/docker && ls -la
+      run: cd api && docker build . --file Dockerfile --tag $DOCKER_HUB_USER/keystroke-api:latest
   build-webapp:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
     - name: Build the Webapp Docker image
-      run: cd webapp && docker build . --file Dockerfile --tag $DOCKER_HUB_USER/keystroke-webapp:latest && cd /var/lib/docker && ls -la
+      run: cd webapp && docker build . --file Dockerfile --tag $DOCKER_HUB_USER/keystroke-webapp:latest
   push-images:
     needs: [build-api, build-webapp]
     runs-on: ubuntu-latest
