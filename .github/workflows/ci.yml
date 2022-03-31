@@ -16,13 +16,13 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the API Docker image
-      run: cd api && docker build . --file Dockerfile --tag $DOCKER_HUB_USER/keystroke-api:latest
+      run: cd api && docker build . --file Dockerfile --tag $DOCKER_HUB_USER/keystroke-api:latest && cd /var/lib/docker && ls -la
   build-webapp:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
     - name: Build the Webapp Docker image
-      run: cd webapp && docker build . --file Dockerfile --tag $DOCKER_HUB_USER/keystroke-webapp:latest
+      run: cd webapp && docker build . --file Dockerfile --tag $DOCKER_HUB_USER/keystroke-webapp:latest && cd /var/lib/docker && ls -la
   push-images:
     needs: [build-api, build-webapp]
     runs-on: ubuntu-latest
