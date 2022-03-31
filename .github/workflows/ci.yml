@@ -7,8 +7,8 @@ on:
     branches: [ master ]
 
 env:
-  DOCKER_HUB_USER: zsofi25
-  DOCKER_HUB_PASSWORD: JkLxas25W
+  DOCKER_HUB_USER: ${{ secrets.DOCKER_HUB_USER }}
+  DOCKER_HUB_PASSWORD: ${{ secrets.DOCKER_HUB_PASSWORD }}
 
 jobs:
   build-and-push-api:
@@ -16,18 +16,18 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the API Docker image
-      run: cd api && docker build . --file Dockerfile --tag $DOCKER_HUB_USER/keystrokeapi:0.1
+      run: cd api && docker build . --file Dockerfile --tag $DOCKER_HUB_USER/keystrokeapi:$(date +%s)
     - name: Login to Docker HUB
       run: docker login -u $DOCKER_HUB_USER -p $DOCKER_HUB_PASSWORD
     - name: Push API to Docker HUB
-      run: docker push $DOCKER_HUB_USER/keystrokeapi:0.1
+      run: docker push $DOCKER_HUB_USER/keystrokeapi:$(date +%s)
   build-and-push-webapp:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
     - name: Build the Webapp Docker image
-      run: cd webapp && docker build . --file Dockerfile --tag $DOCKER_HUB_USER/keystrokewebapp:0.1
+      run: cd webapp && docker build . --file Dockerfile --tag $DOCKER_HUB_USER/keystrokewebapp:$(date +%s)
     - name: Login to Docker HUB
       run: docker login -u $DOCKER_HUB_USER -p $DOCKER_HUB_PASSWORD
     - name: Push Webapp to Docker HUB
-      run: docker push $DOCKER_HUB_USER/keystrokewebapp:0.1
+      run: docker push $DOCKER_HUB_USER/keystrokewebapp:$(date +%s)
