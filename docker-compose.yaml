@@ -1,19 +1,9 @@
 services:
   api:
-    build: 
-      dockerfile: Dockerfile
-      context: /api
-    volumes:
-      - ./api:/api
-      - /api/node_modules
+    image: zsofi25/keystroke-api:latest
     ports:
       - "5000:5000"
   webapp:
-    build:
-      dockerfile: Dockerfile
-      context: /webapp
-    volumes:
-      - ./webapp:/webapp
-      - /webapp/node_modules
+    image: zsofi25/keystroke-webapp:latest
     ports:
       - "3000:3000"
