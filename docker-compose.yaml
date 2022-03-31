@@ -1,9 +1,9 @@
 services:
   api:
-    image: zsofi25/keystroke-api:latest
+    image: zsofi25/keystrokeapi:latest
     ports:
       - "5000:5000"
   webapp:
-    image: zsofi25/keystroke-webapp:latest
+    image: zsofi25/keystrokewebapp:latest
     ports:
       - "3000:3000"
