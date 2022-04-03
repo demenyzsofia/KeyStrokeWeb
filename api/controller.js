@@ -13,17 +13,6 @@ const getLanguage = (req) =>{
 }
 
 const sapipin = (req, res) => {
-    // const url = '/' + getLanguage(req) + '/sapipin/hist_plots'
-    // let list = fs.readdirSync(path.join(directoryPath, url));
-    // // console.log(list)
-    // list = list.map(item => {
-    //     return url + '/' + item
-    // })
-    // // console.log(list)
-
-    // res.json(list)
-   
-
     const url = '/' + getLanguage(req) + '/sapipin/';
     let directories = fs.readdirSync(path.join(directoryPath, url));
    
@@ -35,9 +24,72 @@ const sapipin = (req, res) => {
         })
         return element
     } );
-    const restData = {"hist": directories[0], "roccurve": directories[1]}
+    const restData = {"box": directories[0], "hist": directories[1], "line": directories[2], "roccurve": directories[3]}
     res.json(restData)
-
 }
 
-module.exports = {sapipin} 
+const easy = (req, res) => {
+    const url = '/' + getLanguage(req) + '/easy/';
+    let directories = fs.readdirSync(path.join(directoryPath, url));
+   
+    directories = directories.map((element, index)  =>{
+        url_ = url + directories.at(index).toString()
+        element = fs.readdirSync(path.join(directoryPath, url_ + '/'));
+        element = element.map(item => {
+                 return url_ + '/'  + item
+        })
+        return element
+    } );
+    const restData = {"box": directories[0], "hist": directories[1], "line": directories[2], "roccurve": directories[3]}
+    res.json(restData)
+}
+
+const keystroke2014 = (req, res) => {
+    const url = '/' + getLanguage(req) + '/keystroke2014/';
+    let directories = fs.readdirSync(path.join(directoryPath, url));
+   
+    directories = directories.map((element, index)  =>{
+        url_ = url + directories.at(index).toString()
+        element = fs.readdirSync(path.join(directoryPath, url_ + '/'));
+        element = element.map(item => {
+                 return url_ + '/'  + item
+        })
+        return element
+    } );
+    const restData = {"box": directories[0], "hist": directories[1], "line": directories[2], "roccurve": directories[3]}
+    res.json(restData)
+}
+
+const logicalstrong = (req, res) => {
+    const url = '/' + getLanguage(req) + '/logicalstrong/';
+    let directories = fs.readdirSync(path.join(directoryPath, url));
+   
+    directories = directories.map((element, index)  =>{
+        url_ = url + directories.at(index).toString()
+        element = fs.readdirSync(path.join(directoryPath, url_ + '/'));
+        element = element.map(item => {
+                 return url_ + '/'  + item
+        })
+        return element
+    } );
+    const restData = {"box": directories[0], "hist": directories[1], "line": directories[2], "roccurve": directories[3]}
+    res.json(restData)
+}
+
+const strong = (req, res) => {
+    const url = '/' + getLanguage(req) + '/strong/';
+    let directories = fs.readdirSync(path.join(directoryPath, url));
+   
+    directories = directories.map((element, index)  =>{
+        url_ = url + directories.at(index).toString()
+        element = fs.readdirSync(path.join(directoryPath, url_ + '/'));
+        element = element.map(item => {
+                 return url_ + '/'  + item
+        })
+        return element
+    } );
+    const restData = {"box": directories[0], "hist": directories[1], "line": directories[2], "roccurve": directories[3]}
+    res.json(restData)
+}
+
+module.exports = {sapipin, easy, keystroke2014, logicalstrong, strong} 

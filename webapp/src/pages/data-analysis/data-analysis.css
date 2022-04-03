@@ -1,0 +1,21 @@
+.content {
+    flex-grow: 6;
+    margin: 30px;
+    
+}
+
+.content p{
+    padding-left:1em; 
+    text-indent :3em;
+}
+  
+.content #dataTitle{
+    margin: 30px;
+    margin-left: 25%;
+}
+
+.swiper {
+    margin: 10px;
+    width: 630px;
+    height: 600px;
+  }

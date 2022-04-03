@@ -7,7 +7,7 @@ const Home = () => {
     return <div className="content">
                 <h2 id="scope">{t("pages.home.title")}</h2>
                 <p>{t("pages.home.introduction")}</p>
-                <p>{t("pages.home.content")}</p>
+                <p>{t("pages.home.content1")}<a href="/datasets"><b><i>{t("pages.home.datasets")}</i></b></a>{t("pages.home.content2")}</p>
                 <ol className="list">
                     <li><b><i>{t("pages.home.listing.1")}</i></b></li>
                     <li><b><i>{t("pages.home.listing.2")}</i></b></li>
