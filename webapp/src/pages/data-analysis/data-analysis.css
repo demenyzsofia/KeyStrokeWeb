@@ -16,6 +16,10 @@
 
 .swiper {
     margin: 10px;
-    width: 630px;
-    height: 600px;
+    width: 660px;
+    height: 450px;
   }
+
+.boxes{
+    padding-left: 15px;
+}

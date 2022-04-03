@@ -67,6 +67,24 @@ const DataAnalysis = () => {
                 return <SwiperSlide>{src}</SwiperSlide> ;
                 })}
         </Swiper> */}
+         {/* <Swiper
+            spaceBetween={30}
+            centeredSlides={true}
+            autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+            }}
+            pagination={{
+            clickable: true,
+            }}
+            navigation={true}
+            modules={[Autoplay, Pagination, Navigation]}
+            className="mySwiper">
+            {easyImages && renderEasyImages().map((src) => {
+                return <SwiperSlide className="boxes">{src}</SwiperSlide> ;
+                })}
+
+        </Swiper> */}
         <Swiper
             spaceBetween={30}
             centeredSlides={true}
