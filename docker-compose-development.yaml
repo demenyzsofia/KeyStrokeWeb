@@ -1,8 +1,9 @@
+version: "3"
 services:
   api:
     build: 
       dockerfile: Dockerfile
-      context: /api
+      context: ./api
     volumes:
       - ./api:/api
       - /api/node_modules
@@ -11,7 +12,7 @@ services:
   webapp:
     build:
       dockerfile: Dockerfile
-      context: /webapp
+      context: ./webapp
     volumes:
       - ./webapp:/webapp
       - /webapp/node_modules
