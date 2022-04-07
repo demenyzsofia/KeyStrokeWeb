@@ -8,6 +8,7 @@ import PerformanceAnalysis from "./pages/performance-analysis/performance-analys
 import PythonBasics from "./pages/python-basics/python-basics";
 import DefaultLayout from "./shared/layouts/default-layout";
 import PerformanceLayout from "./shared/layouts/performace-layout/performance_layout";
+import DataLayout from "./shared/layouts/data-layout/data-layout";
 
 const renderRoutes = () => {
     return <Routes>
@@ -15,7 +16,7 @@ const renderRoutes = () => {
         <Route path="/datasets" element={<DefaultLayout><Datasets/></DefaultLayout>} />
         <Route path="/basic-concepts" element={<DefaultLayout><BasicConcepts/></DefaultLayout>} />
         {/* <Route path="/python-basics" element={<DefaultLayout><PythonBasics/></DefaultLayout>} /> */}
-        <Route path="/data-analysis" element={<DefaultLayout><DataAnalysis/></DefaultLayout>} />
+        <Route path="/data-analysis" element={<DataLayout><DataAnalysis/></DataLayout>} />
         <Route path="/performance-analysis" element={<PerformanceLayout><PerformanceAnalysis/></PerformanceLayout>} />
     </Routes>
 }

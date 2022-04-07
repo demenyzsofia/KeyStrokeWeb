@@ -3,7 +3,7 @@ import Accordion from './according/Accordion';
 
 
 const DetectorSidebar = () => {
-    return <div className="getectorSidebar">
+    return <div className="detectorSidebar">
           <h2 id="detectorG">Detektor kategóriák</h2>
           <Accordion className="accordion"></Accordion>
         </div>
