@@ -27,3 +27,8 @@
 #dataTitle{
     padding-left : 15%;
 }
+
+#selected-dataset{
+    padding-left : 5%;
+    font-size: 20px;
+}

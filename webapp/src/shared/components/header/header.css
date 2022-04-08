@@ -7,8 +7,16 @@
     
   }
 
-  .header img {
-    height: 122px;
-    padding-top: 20px;
-    padding-left: 20px;
-  }
+.header img {
+  height: 122px;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.flags img{
+  height: 30px;
+}
+
+.flags{
+  padding-left: 30%;
+}

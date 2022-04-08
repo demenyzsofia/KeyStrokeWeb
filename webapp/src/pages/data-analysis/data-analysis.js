@@ -17,6 +17,7 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 import "./data-analysis.css"
 import { useGlobalState } from "../..";
 import { DATASET } from "../../shared/constants/datasets";
+import { DIAGRAMTYPE } from "../../shared/constants/diagram-types";
 
 const DataAnalysis = () => {
     const [dataset,setDataset] =  useGlobalState('dataset');
@@ -43,7 +44,9 @@ const DataAnalysis = () => {
     return <div className="content">
         <h2 id="dataTitle">Adatelemzés</h2>
         <p>A kiválaszotott adathalmaz:</p>
-        <p>{dataset}</p>
+        <p id="selected-dataset"><b>{dataset}</b></p>
+        {diagramType === DIAGRAMTYPE.HIST && <a href="/basic-concepts/#hist-text">{'Jellemzők hisztogramjai'}</a>}
+        {diagramType === DIAGRAMTYPE.LINE && <a href="">{'Felhasználók gépelési ritmusai'}</a>}     
         <>
         <Swiper
             spaceBetween={30}

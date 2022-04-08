@@ -28,6 +28,7 @@
                 "6": "Igaz negatív (TN: true negative): amely az osztályozási modell által helyesen prediktált negatív esetek száma",
                 "7": "Pontosság = TP/(TP+FP): megmutatja, hogy a pozitívként felismertek hányad része volt valóban pozitív" 
             },
+            "subtitle2" : "Jelölések",
             "listing2":{
                 "1": "CSV - Comma-Separated Values: vesszővel elválasztott érték",
                 "2": "AUC - Area Under the ROC Curve: ROC görbe alatti terület;  kifejezi, hogy mennyire soroljuk a pozitív mintákat a negtívak elé a tesztelés folyamán.",

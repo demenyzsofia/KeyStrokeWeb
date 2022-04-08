@@ -8,13 +8,7 @@ import { useState } from "react";
 
 const MainContent = () => {
     const [active, setActive] =  useGlobalState('dataset');
-    const [style, setStyle] = useState("cont");
-  
-  const changeStyle = () => {
-    //console.log("you just clicked");
-  
-    setStyle("cont2");
-  };
+   
     return <div className="sidebar">
             <h2>Adathalmazok</h2>
            

@@ -15,6 +15,7 @@ const BasicConcepts = () => {
                 <li>{t('pages.basic-concepts.listing1.5')}</li>
                 <li>{t('pages.basic-concepts.listing1.6')}</li>
                 <li>{t('pages.basic-concepts.listing1.7')}</li>
+                <li id="hist-text">A hisztogram metrikusan skálázott tulajdonságok grafikus ábrázolása</li>
             </ul>
             <p className='subtitle'><b>{t('pages.basic-concepts.subtitle2')}</b></p>
             <ul className='notation'>
