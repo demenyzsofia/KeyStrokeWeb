@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import "../../translations/i18n";
-import { getSapipinImages } from "../../services/services";
+import { getImages, getSapipinImages } from "../../services/services";
 import React, { useRef } from "react";
 import "./performance-analysis.css"
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -9,13 +9,14 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper";
+import { DATASET } from "../../shared/constants/datasets";
 
 
 const PerformanceAnalysis = () => {
     const [images, setImages] = useState();
 
     useEffect(() =>{
-        getSapipinImages().then(data => {
+        getImages(DATASET.SAPIPIN).then(data => {
             console.log(data.data)
             setImages(data.data);
         }).catch(err => {
