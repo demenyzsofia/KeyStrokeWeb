@@ -1,7 +1,7 @@
 .navigation ul {
     display: flex;
     flex-direction: row;
-    column-gap: 24px;
+    column-gap: 15px;
     align-items: center;
     padding: 0 95px;
     border-radius: 10px;
@@ -35,3 +35,41 @@
 .navigation img{
     height: 42px;
 }
+
+
+
+ul li ul {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    transition: 0.1s;
+    margin-top: 1.7rem;
+    left: 50;
+    display: none;
+}
+  
+
+  
+ul li:hover > ul, ul li ul:hover {
+    visibility: visible;
+    opacity: 2;
+    display: block;
+    background-color:white;
+    border: 8px solid #bababa;
+    padding-left: 15px;
+    padding-right: 15px;
+    
+}
+  
+ul li ul li {
+    clear:left;
+    width: 100%;
+}
+
+.group{
+    display: flex;
+    flex-direction: row;
+}
+
+
+ 

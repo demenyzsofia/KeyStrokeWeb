@@ -1,7 +1,6 @@
 import logo from "../../../images/logo.png"
 import hungarian from "../../../images/hungarian.png"
 import unitedKingdom from "../../../images/united-kingdom.png"
-import romanian from "../../../images/romanian.png"
 import "./header.css"
 
 const Header = ({title}) => {
@@ -11,7 +10,6 @@ const Header = ({title}) => {
         <div className="flags">
             <img src={hungarian} />
             <img src={unitedKingdom} />
-            <img src={romanian} />
         </div>
     </div>
 }

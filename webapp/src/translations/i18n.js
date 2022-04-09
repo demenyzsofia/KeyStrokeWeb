@@ -2,7 +2,6 @@ import i18n from "i18next";
 import {initReactI18next} from "react-i18next";
 import translationHu from './hu.json'
 import translationEn from "./en.json"
-import translationRo from "./ro.json"
 
 i18n
   .use(initReactI18next)
@@ -15,9 +14,6 @@ i18n
       hu: {
         translation: translationHu
       },
-      ro: {
-        translation: translationRo
-      }
     },
     lng: "hu",
     fallbackLng: "hu",
