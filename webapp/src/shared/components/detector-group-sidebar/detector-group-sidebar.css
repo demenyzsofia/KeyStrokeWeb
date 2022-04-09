@@ -1,0 +1,25 @@
+.detectorGroupSidebar {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    margin-top: 0px;
+    padding-left: 10px;
+}
+.detectorGroupSidebar a {
+    color: #454545;
+    padding-top: 8px;
+} 
+  
+.detectorGroupSidebar a:hover {
+    background-color: #bababa;
+    color: #454545;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+} 
+
+#detectorGroupTitle{
+    font-size: 20px;
+}

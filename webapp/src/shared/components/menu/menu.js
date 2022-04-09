@@ -1,6 +1,5 @@
 import keyboard from "../../../images/keyboard.png"
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
-// import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import "./menu.css"
 
 const Menu = () => {
@@ -25,10 +24,10 @@ const Menu = () => {
                         <a href="/data-analysis">Adatelemzés</a>
                     </li>
                     <li className="group">
-                        <a  href="/performance-analysis">Teljesítményelemzés </a>
+                        <a>Teljesítményelemzés </a>
                         <ul  className='dropdown'>
-                            <li><a href="#">Detegtorkategóriák</a></li>
-                            <li><a href="#">Detektorok</a></li>
+                            <li><a  href="/performance-analysis-detectorGroup">Detegtorkategóriák</a></li>
+                            <li><a href="/performance-analysis-detector">Detektorok</a></li>
                         </ul>
                         <ArrowDropDownIcon/>
                     </li>

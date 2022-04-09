@@ -4,11 +4,12 @@ import Home from "./pages/home";
 import DataAnalysis from "./pages/data-analysis";
 import Datasets from "./pages/datasets";
 import BasicConcepts from "./pages/basic-concepts/basic-concepts";
-import PerformanceAnalysis from "./pages/performance-analysis/performance-analysis";
-import PythonBasics from "./pages/python-basics/python-basics";
 import DefaultLayout from "./shared/layouts/default-layout";
-import PerformanceLayout from "./shared/layouts/performace-layout/performance_layout";
 import DataLayout from "./shared/layouts/data-layout/data-layout";
+import PerformanceDetectorGroupLayout from "./shared/layouts/performace-detectorGroup-layout/performance-detectorGroup-layout";
+import PerformanceDetectorLayout from "./shared/layouts/performance-detector-layout/performance-detector-layout";
+import PerformanceAnalysisDetectorGroup from "./pages/performance-analysis-detectorGroup/performance-analysis-detectorGroup";
+import PerformanceAnalysisDetector from "./pages/performance-analysis-detector/performance-analysis-detector";
 
 const renderRoutes = () => {
     return <Routes>
@@ -17,7 +18,8 @@ const renderRoutes = () => {
         <Route path="/basic-concepts" element={<DefaultLayout><BasicConcepts/></DefaultLayout>} />
         {/* <Route path="/python-basics" element={<DefaultLayout><PythonBasics/></DefaultLayout>} /> */}
         <Route path="/data-analysis" element={<DataLayout><DataAnalysis/></DataLayout>} />
-        <Route path="/performance-analysis" element={<PerformanceLayout><PerformanceAnalysis/></PerformanceLayout>} />
+        <Route path="/performance-analysis-detectorGroup" element={<PerformanceDetectorGroupLayout><PerformanceAnalysisDetectorGroup/></PerformanceDetectorGroupLayout>} />
+        <Route path="/performance-analysis-detector" element={<PerformanceDetectorLayout><PerformanceAnalysisDetector/></PerformanceDetectorLayout>} />
     </Routes>
 }
 
