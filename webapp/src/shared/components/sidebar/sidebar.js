@@ -1,17 +1,12 @@
-import "./sidebar.css"
-
 import { useGlobalState } from "../../..";
 import { DATASET } from "../../constants/datasets";
-import { useState } from "react";
+import "./sidebar.css"
 
-
-
-const MainContent = () => {
+const DatasetsSidebar = () => {
     const [active, setActive] =  useGlobalState('dataset');
    
     return <div className="sidebar">
             <h2>Adathalmazok</h2>
-           
             <a onClick={() => setActive(DATASET.SAPIPIN)}>sapipin</a>
             <a onClick={() => setActive(DATASET.EASY)}>easy</a>
             <a onClick={() => setActive(DATASET.KEYSTROKE2014)}>keystroke2014</a>
@@ -21,4 +16,4 @@ const MainContent = () => {
 }
 
 
-export default MainContent;
+export default DatasetsSidebar;

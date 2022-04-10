@@ -7,11 +7,13 @@ import { createGlobalState } from 'react-hooks-global-state';
 import './styles/style.css';
 import { DATASET } from './shared/constants/datasets';
 import { DIAGRAMTYPE } from './shared/constants/diagram-types';
+import { DETECTORCATEGORY } from './shared/constants/detector-groups';
 
 
 const initialState = {
   diagramType: DIAGRAMTYPE.HIST,
-  dataset : DATASET.SAPIPIN
+  dataset : DATASET.SAPIPIN,
+  detectorGroup : DETECTORCATEGORY.LINEAR
 };
 const { useGlobalState } = createGlobalState(initialState);
 

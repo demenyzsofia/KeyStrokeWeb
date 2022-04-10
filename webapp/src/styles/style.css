@@ -32,12 +32,7 @@ body {
   flex-direction: row;
 }
 
-.performance-sidebar{
-  display: flex;
-  flex-direction: column;
-}
-
-.data-sidebar{
-  display: flex;
-  flex-direction: column;
+.sidebar{
+  width: 230px;
+  height: 200px;
 }

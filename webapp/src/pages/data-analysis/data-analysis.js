@@ -25,7 +25,7 @@ const DataAnalysis = () => {
     const [images, setImages] =   useState();
     
     useEffect(() =>{
-        console.log(dataset)
+        // console.log(dataset)
         getImages(dataset).then(data => {
                 setImages(data.data);
         }).catch(err => {})

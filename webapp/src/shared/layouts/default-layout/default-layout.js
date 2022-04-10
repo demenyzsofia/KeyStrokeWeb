@@ -1,14 +1,14 @@
 import Footer from "../../components/footer/footer";
 import Header from "../../components/header";
 import Menu from "../../components/menu";
-import Sidebar from "../../components/sidebar";
+import DatasetsSidebar from "../../components/sidebar";
 
 const DefaultLayout = (params) => {  
     return <div className="container">
         <Header/>
         <Menu/>
         <div className="main">
-            <Sidebar/>
+            <DatasetsSidebar/>
             {params.children}
         </div>
         <Footer/>

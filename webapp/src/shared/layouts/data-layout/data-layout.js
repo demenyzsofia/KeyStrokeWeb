@@ -2,7 +2,7 @@ import DataSidebar from "../../components/data-sidebar/data-sidebar";
 import Footer from "../../components/footer/footer";
 import Header from "../../components/header";
 import Menu from "../../components/menu";
-import MainContent from "../../components/sidebar/sidebar";
+import DatasetsSidebar from "../../components/sidebar/sidebar";
 
 
 const DataLayout = (params) => {  
@@ -11,7 +11,7 @@ const DataLayout = (params) => {
         <Menu/>
         <div className="main">
             <div className="data-sidebar">
-                <MainContent></MainContent>
+                <DatasetsSidebar></DatasetsSidebar>
                 <DataSidebar></DataSidebar>
             </div>
             {params.children}
