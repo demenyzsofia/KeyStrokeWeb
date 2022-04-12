@@ -14,8 +14,8 @@ import { useGlobalState } from "../..";
 
 
 const PerformanceAnalysisDetectorGroup = () => {
-    const [dataset,setDataset] =  useGlobalState('dataset');
-    const [detectorGroup,setdetectorGroup] =  useGlobalState('detectorGroup');
+    const [dataset] =  useGlobalState('dataset');
+    const [detectorGroup] =  useGlobalState('detectorGroup');
     const [images, setImages] = useState()
 
 

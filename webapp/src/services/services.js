@@ -6,10 +6,10 @@ export const getImages = (dataset) => {
     return axios.get(url)
 }
 
-// export const getSapipinImages = () => {
-//     const url = '/images/sapipin'
-//     return axios.get(url)
-// }
+export const getDetectorsBoxImages = () => {
+    const url = '/images/box'
+    return axios.get(url)
+}
 
 // export const getEasyImages = () => {
 //     const url = '/images/easy'

@@ -8,12 +8,14 @@ import './styles/style.css';
 import { DATASET } from './shared/constants/datasets';
 import { DIAGRAMTYPE } from './shared/constants/diagram-types';
 import { DETECTORCATEGORY } from './shared/constants/detector-groups';
+import { DETECTOR } from './shared/constants/detectors';
 
 
 const initialState = {
   diagramType: DIAGRAMTYPE.HIST,
   dataset : DATASET.SAPIPIN,
-  detectorGroup : DETECTORCATEGORY.LINEAR
+  detectorGroup : DETECTORCATEGORY.LINEAR,
+  detector: DETECTOR.PCA
 };
 const { useGlobalState } = createGlobalState(initialState);
 

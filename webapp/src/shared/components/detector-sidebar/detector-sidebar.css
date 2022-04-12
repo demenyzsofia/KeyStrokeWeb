@@ -1,5 +1,5 @@
 
-.accordion{
+/* .accordion{
     margin: 20px;
     margin-left: 5px;
 }
@@ -7,21 +7,22 @@
 .accordion-title{
     margin: 20px;
     margin-left: 0px;
-}
+} */
 
-#detectorG{
+#detectors{
     padding: 8px;
     margin-top: 20px;
     margin-left: 0px;
+    margin-bottom: 20px;
     padding-left: 0px;
 }
 
-.detectors li{
+/* .detectors li{
     color: #454545;
     padding-top: 8px;
     margin-left: 20px;
-} 
-
+}  */
+/* 
 
 .detectorSidebar{
     flex-grow: 1;
@@ -30,23 +31,28 @@
     margin: 0px;
     margin-top: 30px;
     padding-left: 10px;
+} */
+
+
+.detectorSidebar ul{
+    margin: 20px;  
+    margin-top: 0px;
+    margin-left: 5px;
+}
+ 
+.detectorSidebar ul li{
+    margin: 10px;  
+    margin-left: 20px;
+
+
 }
 
-.groups {
-    color: #454545;
-    padding-top: 8px;
-    font-size: 16px;
-    display: flex;
-    flex-direction: row;
-} 
-  
-.groups:hover {
+.detectorSidebar ul li:hover{
     background-color: #bababa;
     color: #454545;
     padding: 10px 20px;
+    width: 100px;
+    height: 20px;
     text-align: center;
-    text-decoration: none;
     display: inline-block;
 } 
-
-  

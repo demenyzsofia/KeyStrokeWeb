@@ -92,4 +92,22 @@ const strong = (req, res) => {
     res.json(restData)
 }
 
-module.exports = {sapipin, easy, keystroke2014, logicalstrong, strong} 
+const datasetsBox= (req, res) => {
+    const url = '/' + getLanguage(req) + "/box/";
+    let directories = fs.readdirSync(path.join(directoryPath, url));
+   
+    directories = directories.map((element, index)  =>{
+        url_ = url + directories.at(index).toString()
+        element = fs.readdirSync(path.join(directoryPath, url_ + '/'));
+        element = element.map(item => {
+                 return url_ + '/'  + item
+        })
+        return element
+    } );
+    const restData = {"abod": directories[0], "copod": directories[1], "fb": directories[2],
+                        "hbos": directories[3], "iforest": directories[4], "knn": directories[5],
+                        "lof": directories[6], "ocsvm": directories[7], "pca":directories[8]}
+    res.json(restData)
+}
+
+module.exports = {sapipin, easy, keystroke2014, logicalstrong, strong, datasetsBox} 

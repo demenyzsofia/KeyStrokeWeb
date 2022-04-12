@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import "../../translations/i18n";
-import { getImages, getSapipinImages } from "../../services/services";
+import { getDetectorsBoxImages } from "../../services/services";
 import React, { useRef } from "react";
 import "./performance-analysis-detector.css"
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -9,15 +9,15 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper";
-import { DATASET } from "../../shared/constants/datasets";
+import { useGlobalState } from "../..";
 
 
 const PerformanceAnalysisDetector = () => {
+    const [detector] =  useGlobalState('detector');
     const [images, setImages] = useState();
 
     useEffect(() =>{
-        getImages(DATASET.SAPIPIN).then(data => {
-            console.log(data.data)
+        getDetectorsBoxImages().then(data => {
             setImages(data.data);
         }).catch(err => {
             console.log(err)
@@ -25,7 +25,7 @@ const PerformanceAnalysisDetector = () => {
     }, []);
 
     const renderImages = () => {
-        return images.roccurve.map(image => {
+        return images[detector].map(image => {
             return <img src={'http://localhost:5000/public/images/' + image} />
         })
     }
@@ -35,7 +35,7 @@ const PerformanceAnalysisDetector = () => {
     return  <div className="content">
         <h2 id="performanceTitle">Teljesítményelemzés</h2>
         <>
-        {/* <Swiper
+        <Swiper
             spaceBetween={30}
             centeredSlides={true}
             autoplay={{
@@ -51,10 +51,9 @@ const PerformanceAnalysisDetector = () => {
             {images && renderImages().map((src) => {
                 return <SwiperSlide>{src}</SwiperSlide> ;
                 })}
-        </Swiper> */}
+        </Swiper>
         </>
        
-        {images && renderImages()[0]}
        
     </div>
 }
