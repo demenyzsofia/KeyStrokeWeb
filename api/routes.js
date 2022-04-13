@@ -7,6 +7,6 @@ router.route('/easy').get(controller.easy)
 router.route('/keystroke2014').get(controller.keystroke2014)
 router.route('/logicalstrong').get(controller.logicalstrong)
 router.route('/strong').get(controller.strong)
-router.route('/box').get(controller.datasetsBox)
+router.route('/detectors').get(controller.datasetsBox)
 
 module.exports = router

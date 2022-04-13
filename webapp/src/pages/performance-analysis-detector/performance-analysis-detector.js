@@ -26,7 +26,7 @@ const PerformanceAnalysisDetector = () => {
 
     const renderImages = () => {
         return images[detector].map(image => {
-            return <img src={'http://localhost:5000/public/images/' + image} />
+            return <div className="detectorImages"><img src={'http://localhost:5000/public/images/' + image} /></div>
         })
     }
     
@@ -47,7 +47,7 @@ const PerformanceAnalysisDetector = () => {
             }}
             navigation={true}
             modules={[Autoplay, Pagination, Navigation]}
-            className="mySwiper">
+            className="mydetectorSwiper">
             {images && renderImages().map((src) => {
                 return <SwiperSlide>{src}</SwiperSlide> ;
                 })}

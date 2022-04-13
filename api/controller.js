@@ -93,7 +93,7 @@ const strong = (req, res) => {
 }
 
 const datasetsBox= (req, res) => {
-    const url = '/' + getLanguage(req) + "/box/";
+    const url = '/' + getLanguage(req) + "/detectors/";
     let directories = fs.readdirSync(path.join(directoryPath, url));
    
     directories = directories.map((element, index)  =>{
