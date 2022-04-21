@@ -3,11 +3,7 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import "../../translations/i18n";
 
-import { getImages, getSapipinImages } from "../../services/services";
-import { getEasyImages } from "../../services/services";
-import { getKeystroke2014Images } from "../../services/services";
-import { getLogicalstrongImages } from "../../services/services";
-import { getStrongImages } from "../../services/services";
+import { getImages } from "../../services/services";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -17,15 +13,14 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 
 import "./data-analysis.css"
 import { useGlobalState } from "../..";
-import { DIAGRAMTYPE } from "../../shared/constants/diagram-types";
 
 const DataAnalysis = () => {
-    const [dataset,setDataset] =  useGlobalState('dataset');
+    const { t } = useTranslation(); 
+    const [dataset] =  useGlobalState('dataset');
     const [diagramType] =  useGlobalState('diagramType');
     const [images, setImages] =   useState();
     
     useEffect(() =>{
-        // console.log(dataset)
         getImages(dataset).then(data => {
                 setImages(data.data);
         }).catch(err => {})
@@ -34,18 +29,14 @@ const DataAnalysis = () => {
 
     const renderImages = () => {
         return images[diagramType].map(image => {
-            return <div className="data-analysis-image">
+            return <div className="dataImages">
                     <img src={'http://localhost:5000/public/images' + image} />
                 </div>
         })
     }
 
     return <div className="content" >
-        <h2 id="dataTitle">Adatelemzés</h2>
-        <p>A kiválaszotott adathalmaz:</p>
-        <p id="selected-dataset"><b>{dataset}</b></p>
-        {diagramType === DIAGRAMTYPE.HIST && <a href="/basic-concepts/#hist-text">{'Jellemzők hisztogramjai'}</a>}
-        {diagramType === DIAGRAMTYPE.LINE && <a href="">{'Felhasználók gépelési ritmusai'}</a>}     
+        <h2 id="dataTitle">{t('pages.data-analysis.title')}</h2> 
         <>
         
         <Swiper
@@ -61,9 +52,9 @@ const DataAnalysis = () => {
             }}
             navigation={true}
             modules={[Autoplay, Pagination, Navigation]}
-            className="mySwiper">
+            className="myDataSwiper">
             {images && renderImages().map((src) => {
-                return <SwiperSlide className="swiperSlides">{src}</SwiperSlide> ;
+                return <SwiperSlide >{src}</SwiperSlide> ;
                 })}
         </Swiper>
         </>

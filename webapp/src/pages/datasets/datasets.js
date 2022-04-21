@@ -4,7 +4,7 @@ import './datasets.css'
 
 const Datasets = () => {
     const { t } = useTranslation();
-    return <div class="content">
+    return <div class="datasetContent">
             <h2 id="data">{t('pages.datasets.title')}</h2>
             <table className='table'>
                 <tr>

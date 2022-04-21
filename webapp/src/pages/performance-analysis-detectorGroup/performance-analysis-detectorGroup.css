@@ -18,4 +18,13 @@
     margin: 10px;
     width: 630px;
     height: 450px;
-  }
+}
+
+.myDetectorGroupSwiper{
+    height: 525px;
+    width: 640px;
+}
+
+.detectorGroupImages img{
+    padding: 26px;
+}

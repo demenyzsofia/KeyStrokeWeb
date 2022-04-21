@@ -1,18 +1,21 @@
 import React from 'react';
 import { useGlobalState } from '../../..';
-import { DETECTORCATEGORY, DETECTORGROUP } from '../../constants/detector-groups';
+import { DETECTORCATEGORY } from '../../constants/detector-groups';
+import { useTranslation } from "react-i18next";
+import "../../../translations/i18n";
 import "./detector-group-sidebar.css"
 
 
 const DetectorGroupSidebar = () => {
+    const { t } = useTranslation(); 
     const [active, setActive] =  useGlobalState('detectorGroup');
 
     return <div className="detectorGroupSidebar">
             <h2 id="detectorGroupTitle">Detektor kategóriák</h2>
-            <a onClick={() => setActive(DETECTORCATEGORY.LINEAR)}>{DETECTORGROUP.LINEAR}</a>
-            <a onClick={() => setActive(DETECTORCATEGORY.ENSEMBLE)}>{DETECTORGROUP.ENSEMBLE}</a>
-            <a onClick={() => setActive(DETECTORCATEGORY.PROBABILISTIC)}>{DETECTORGROUP.PROBABILISTIC}</a>
-            <a onClick={() => setActive(DETECTORCATEGORY.PROXIMITY)}>{DETECTORGROUP.PROXIMITY}</a>
+            <a onClick={() => setActive(DETECTORCATEGORY.LINEAR)}>{t("detectorGroups.linear")}</a>
+            <a onClick={() => setActive(DETECTORCATEGORY.ENSEMBLE)}>{t("detectorGroups.outlierEnsembles")}</a>
+            <a onClick={() => setActive(DETECTORCATEGORY.PROBABILISTIC)}>{t("detectorGroups.probabilistic")}</a>
+            <a onClick={() => setActive(DETECTORCATEGORY.PROXIMITY)}>{t("detectorGroups.proximityBased")}</a>
         </div>
 }
 

@@ -41,52 +41,10 @@
                 "9": "TNR: Igaz negatívak aránya: TN/(összes negatívok száma)"
             }
         },
-        "python-basics": {
-            "title": "Anomália detektálás Pythonban",
-            "introduction": "Pythonban nagyon könnyen lehet anomália detektáló algoritmust írni, számos beépített könyvtárcsomag van a segítségünkre.",
-            "content": "Az első és legfontosabb a PyOD csomag, mely egy átfogó és skálázható Python-eszközkészlet a kiugró értékek felderítésére, végeztem el a detektálásokat. Ez a csomag több mint harminc észlelési algoritmust tartalmaz, mely öt csoportba sorolható, a különféle technikáknak meglelelően:",
-            "listing": {
-                "1": "Lineáris modellek",
-                "2": "Közelség alapú modellek",
-                "3": "Együttes módszereken alapuló modellek",
-                "4": "Információelméleti modellek",
-                "5": "Valószínűségi modellek"
-            },
-            "sclearn": "Emelett még az scikit-learn könyvtárcsomag is fontos szerepet játszik.",
-            "subtitle": "Példaként nézzük a k−NN osztályozót",
-            "knn-intro": "A k−NN(k Nearest Neighbor) osztályozó a Közelség alapú modellek csoportjába tartozik. Esetében adottak a minták és a hozzájuk tartozó címkék. Ha egy még ismeretlen mintát szeretenénk a k−NN-el osztályozni, meg kell néznünk az ismeretlen mintához tartozó k darab legközelebbi ismert minta címkéjét, majd azok alapján dönteni az ismeretlen címkéjéről",
-            "code":{
-                "row1": "#from models import kNN detector",
-                "row2": "from pyod.models.knn import KNN",
-                "row3": "#generate sample data with pyod.utils.data.generate_data()",
-                "row4": "#percentage of outliers",
-                "row5": "contamination = 0.1",
-                "row6": "#number of training points",
-                "row7": "n_train = 200",
-                "row8": "#number of testing points",
-                "row9": "n_test = 100",
-                "row10": "X_train, y_train, X_test, y_test = generate_data(n_train=n_train, n_test=n_test, contamination=contamination)",
-                "row11": "#initialize a pyod.models.knn.KNN detector, fit the model, and make the prediction.",
-                "row12": "#train kNN detector",
-                "row13": "clf_name = 'KNN'",
-                "row14": "clf = KNN()",
-                "row15": "clf.fit(X_train)",
-                "row16": "#get the prediction labels and outlier scores of the training data",
-                "row17": "#binary labels (0: inliers, 1: outliers)",
-                "row18": "y_train_pred = clf.labels_",
-                "row19": "#raw outlier scores",
-                "row20": "y_train_scores = clf.decision_scores_",
-                "row21": "#get the prediction on the test data",
-                "row22": "#outlier labels (0 or 1)",
-                "row23": "y_test_pred = clf.predict(X_test)",
-                "row24": "# outlier scores",
-                "row25": "y_test_scores = clf.decision_function(X_test)",
-                "row26": "#it is possible to get the prediction confidence as well",
-                "row27": "#outlier labels (0 or 1) and confidence in the range of [0,1]",
-                "row28": "y_test_pred, y_test_pred_confidence = clf.predict(X_test, return_confidence=True)"
-            }
+        "data-analysis":{
+            "title" : "Adatelemzés"
         }
-
+       
     },
 
     "shared": {
@@ -95,13 +53,20 @@
         },
         "menu": {
             "listing":{
-                "1": "Főoldal",
-                "2": "Adathalmazok",
-                "3": "Alapfogalmak",
-                "4": "Python alapok",
-                "5": "Adatelemzés",
-                "6": "Teljesítményelemzés"
+                "home": "Főoldal",
+                "datasets": "Adathalmazok",
+                "basicConcepts": "Alapfogalmak",
+                "dataAnalysis": "Adatelemzés",
+                "performanceAnalysis": "Teljesítményelemzés"
+            },
+            "submenu":{
+                "detectorgroup": "Detektor kategória",
+                "detector": "Detektor"
             }
+        },
+        "datasidebar":{
+            "hist": "Hisztogramok",
+            "typing": "Gépelési ritmusok"
         },
         "sidebar":{
             "title": "Adathalmazok"
@@ -109,7 +74,15 @@
         "footer":{
             "title": "© 2022 - Demény Zsófia - Diplomadolgozat"
         }
+    },
+    "detectorGroups": {
+        "linear": "Lineáris modellek",
+        "proximityBased": "Közelségalapú modellek",
+        "probabilistic": "Valószínűségi modellek",
+        "outlierEnsembles": "Ensemble típusú modellek"
     }
+
+
 
     
 }

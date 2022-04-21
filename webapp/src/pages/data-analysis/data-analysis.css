@@ -1,4 +1,4 @@
-.content {
+/* .content {
     flex-grow: 6;
     margin: 30px;
     
@@ -12,24 +12,13 @@
 .content #dataTitle{
     margin: 30px;
     margin-left: 25%;
+} */
+
+.myDataSwiper{
+    height: 1000px;
+    width: 1000px;
 }
 
-.swiper {
-    margin: 10px;
-    width: 660px;
-    height: 450px;
-  }
+.dataImages img{
 
-.boxes{
-    padding-left: 15px;
 }
-
-#dataTitle{
-    padding-left : 15%;
-}
-
-#selected-dataset{
-    padding-left : 5%;
-    font-size: 20px;
-}
-

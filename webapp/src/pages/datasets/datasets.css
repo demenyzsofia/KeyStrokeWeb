@@ -28,3 +28,10 @@ table, td {
     margin-bottom: 60px;
     margin-left: 25%;
   }
+
+.datasetContent{
+    width: 700px;
+    padding: 20px;
+    padding-left: 140px;
+  
+}

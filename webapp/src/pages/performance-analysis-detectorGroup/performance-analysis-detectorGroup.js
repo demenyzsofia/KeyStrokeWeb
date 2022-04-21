@@ -36,7 +36,7 @@ const PerformanceAnalysisDetectorGroup = () => {
     }
     const renderBoxImages = () => {
         return images.box.map(image => {
-            return <img src={'http://localhost:5000/public/images/' + image} />
+            return <div className="detectorGroupImages"><img src={'http://localhost:5000/public/images/' + image} /></div>
         })
     }
     
@@ -57,7 +57,7 @@ const PerformanceAnalysisDetectorGroup = () => {
             }}
             navigation={true}
             modules={[Autoplay, Pagination, Navigation]}
-            className="mySwiper">
+            className="myDetectorGroupSwiper">
            
             <SwiperSlide> {images && renderRoccurveImages()[detectorGroup]}</SwiperSlide> 
             <SwiperSlide> {images && renderBoxImages()[detectorGroup]}</SwiperSlide> 

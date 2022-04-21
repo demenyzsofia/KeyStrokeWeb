@@ -1,9 +1,12 @@
-import Header from "../header";
+import { useTranslation } from "react-i18next";
+import "../../../translations/i18n";
 import "./footer.css"
 
 const Footer = (parameter) => {
+    const { t } = useTranslation();
+
     return <div class="footer">
-            <p> <i>© 2022 - Demény Zsófia - Diplomadolgozat</i></p>
+            <p><i>{t("shared.footer.title")}</i></p>
             {(parameter.parameter)}
         </div>
 }
