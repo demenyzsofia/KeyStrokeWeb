@@ -6,7 +6,7 @@
   
 .content #basic{
     margin: 30px;
-    margin-left: 25%;
+    padding-left: 30%;
 }
 
 .content p{
@@ -15,16 +15,22 @@
 
 .concepts, .notation{
     margin: 30px;
-    margin-left: 10%;
+    padding-left: 10%;
 }
 
 .subtitle{
     font-size: 20px;
+    margin: 20px;
+    margin-top: 50px;
 }
 
 .concepts li, .notation li{
     margin: 10px;
 }
 
+#keystroke{
+    width: 600px;
+    padding-left: 100px;
+}
   
   

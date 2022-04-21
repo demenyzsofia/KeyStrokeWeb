@@ -20,25 +20,27 @@
             "title": "Alapfoglamak, jelölések",
             "subtitle1" : "Alapfoglamak",
             "listing1" : {
-                "1": "Anomália detektálás: egy olyan eljárás, amely különböző algoritmusokat használva képes meghatározni egy adott adatról, hogy mennyire tér el az előzőleg begyűjtött adatokból előállított modelltől",
-                "2": "Osztályozás: előre definiált osztályokba soroljuk a különböző mintákat",
-                "3": "Igaz pozitív (TP: true positive): modell által helyesen prediktált pozitív esetek száma.",
-                "4": "Hamis negatív (FN: false negative): azon pozitív esetek száma, amelyeket a modell tévesen negatívként prediktál.",
-                "5": "Hamis pozitív (FP: false positive): azon negatív esetek száma, amelyeket a modell tévesen pozitívként prediktál.",
-                "6": "Igaz negatív (TN: true negative): amely az osztályozási modell által helyesen prediktált negatív esetek száma",
-                "7": "Pontosság = TP/(TP+FP): megmutatja, hogy a pozitívként felismertek hányad része volt valóban pozitív" 
+                "anomalyDetection": "Anomália detektálás: egy olyan eljárás, amely különböző algoritmusokat használva képes meghatározni egy adott adatról, hogy mennyire tér el az előzőleg begyűjtött adatokból előállított modelltől",
+                "class": "Osztályozás: előre definiált osztályokba soroljuk a különböző mintákat",
+                "tp": "Igaz pozitív (TP: true positive): modell által helyesen prediktált pozitív esetek száma.",
+                "fn": "Hamis negatív (FN: false negative): azon pozitív esetek száma, amelyeket a modell tévesen negatívként prediktál.",
+                "fp": "Hamis pozitív (FP: false positive): azon negatív esetek száma, amelyeket a modell tévesen pozitívként prediktál.",
+                "tn": "Igaz negatív (TN: true negative): amely az osztályozási modell által helyesen prediktált negatív esetek száma",
+                "precision": "Pontosság = TP/(TP+FP): megmutatja, hogy a pozitívként felismertek hányad része volt valóban pozitív" ,
+                "hist": "A hisztogram metrikusan skálázott tulajdonságok grafikus ábrázolása",
+                "box": "A dobozdiagram egy módszer a numerikus adatok lokalizációjának, terjedésének és ferdeségi csoportjainak grafikus bemutatására a kvartiliseiken keresztül."
             },
             "subtitle2" : "Jelölések",
             "listing2":{
-                "1": "CSV - Comma-Separated Values: vesszővel elválasztott érték",
-                "2": "AUC - Area Under the ROC Curve: ROC görbe alatti terület;  kifejezi, hogy mennyire soroljuk a pozitív mintákat a negtívak elé a tesztelés folyamán.",
-                "3": "EER - Equal Error Rate: egyenlő hibaarány",
-                "4": "H - Hold: nyomvatartás",
-                "5": "UD - Up-Down: fel-le",
-                "6": "TPR: Igaz pozitívak aránya = TP/(összes pozitívok száma)",
-                "7": "FPR: Hamis pozitívak aránya: FP/(összes negatívok száma)",
-                "8": "FNR: Hamis negatívak aránya: FN/(összes pozitívok száma)",
-                "9": "TNR: Igaz negatívak aránya: TN/(összes negatívok száma)"
+                "auc": "AUC - Area Under the ROC Curve: ROC görbe alatti terület;  kifejezi, hogy mennyire soroljuk a pozitív mintákat a negtívak elé a tesztelés folyamán.",
+                "eer": "EER - Equal Error Rate: egyenlő hibaarány",
+                "ht": "HT - Hold Time: egz billentyű lenyomása és felengedése közti idő",
+                "dd": "DD - Down-Down: két egymástkövető billentyű lenyomása közti idő",
+                "ud": "UD - Up-Down: az egyik billentyű felengedése és a rákövetkező billentyű lenyomása közti idő",
+                "tpr": "TPR: Igaz pozitívak aránya = TP/(összes pozitívok száma)",
+                "fpr": "FPR: Hamis pozitívak aránya: FP/(összes negatívok száma)",
+                "fnr": "FNR: Hamis negatívak aránya: FN/(összes pozitívok száma)",
+                "tnr": "TNR: Igaz negatívak aránya: TN/(összes negatívok száma)"
             }
         },
         "data-analysis":{

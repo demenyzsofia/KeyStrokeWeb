@@ -1,5 +1,7 @@
 import { useTranslation } from "react-i18next";
 import "../../translations/i18n";
+import keystroke from "../../images/keystroke.png"
+import box from "../../images/box.png"
 import './basic-concepts.css'
 
 const BasicConcepts = () => {
@@ -8,26 +10,30 @@ const BasicConcepts = () => {
             <h2 id="basic">{t('pages.basic-concepts.title')}</h2>
             <p className='subtitle'><b>{t('pages.basic-concepts.subtitle1')}</b></p>
             <ul className='concepts'>
-                <li>{t('pages.basic-concepts.listing1.1')}</li>
-                <li>{t('pages.basic-concepts.listing1.2')}</li>
-                <li>{t('pages.basic-concepts.listing1.3')}</li>
-                <li>{t('pages.basic-concepts.listing1.4')}</li>
-                <li>{t('pages.basic-concepts.listing1.5')}</li>
-                <li>{t('pages.basic-concepts.listing1.6')}</li>
-                <li>{t('pages.basic-concepts.listing1.7')}</li>
-                <li id="hist-text">A hisztogram metrikusan skálázott tulajdonságok grafikus ábrázolása</li>
+                <li>{t('pages.basic-concepts.listing1.anomalyDetection')}</li>
+                <li>{t('pages.basic-concepts.listing1.class')}</li>
+                <li>{t('pages.basic-concepts.listing1.tp')}</li>
+                <li>{t('pages.basic-concepts.listing1.fn')}</li>
+                <li>{t('pages.basic-concepts.listing1.fp')}</li>
+                <li>{t('pages.basic-concepts.listing1.tn')}</li>
+                <li>{t('pages.basic-concepts.listing1.precision')}</li>
+                <li>{t('pages.basic-concepts.listing1.hist')}</li>
+                {/* <img id="keystroke" src={box} /> */}
+                <li>{t('pages.basic-concepts.listing1.box')}</li>
             </ul>
             <p className='subtitle'><b>{t('pages.basic-concepts.subtitle2')}</b></p>
             <ul className='notation'>
-                <li>{t('pages.basic-concepts.listing2.1')}</li>
-                <li>{t('pages.basic-concepts.listing2.2')}</li>
-                <li>{t('pages.basic-concepts.listing2.3')}</li>
-                <li>{t('pages.basic-concepts.listing2.4')}</li>
-                <li>{t('pages.basic-concepts.listing2.5')}</li>
-                <li>{t('pages.basic-concepts.listing2.6')}</li>
-                <li>{t('pages.basic-concepts.listing2.7')}</li>
-                <li>{t('pages.basic-concepts.listing2.8')}</li>
-                <li>{t('pages.basic-concepts.listing2.9')}</li>
+                <img id="keystroke" src={keystroke} />
+
+                <li>{t('pages.basic-concepts.listing2.ht')}</li>
+                <li>{t('pages.basic-concepts.listing2.dd')}</li>
+                <li>{t('pages.basic-concepts.listing2.ud')}</li>
+                <li>{t('pages.basic-concepts.listing2.auc')}</li>
+                <li>{t('pages.basic-concepts.listing2.eer')}</li>
+                <li>{t('pages.basic-concepts.listing2.tpr')}</li>
+                <li>{t('pages.basic-concepts.listing2.fpr')}</li>
+                <li>{t('pages.basic-concepts.listing2.fnr')}</li>
+                <li>{t('pages.basic-concepts.listing2.tnr')}</li>
             </ul>
         
         </div>
