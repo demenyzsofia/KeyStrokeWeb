@@ -7,11 +7,11 @@
             "datasets": "Adathalmazok",
             "content2": " menüpont alatt. A felhasználó tehát öt adathalmazból választhatja ki, hogy a továbbiakban melyikkel szeretne dolgozni, melyiket szeretné megtekinteni. Két fő funkcionalitást tudunk elkülöníteni:", 
             "listing": {
-                "1": "Adatelemzés",
-                "2": "Teljesítményelemzés"
+                "dataAnalysis": "Adatelemzés",
+                "performanceAnalysis": "Teljesítményelemzés"
             },
-            "data": "Az adatelemzési funkcionalitás lehetőséget ad a kiválasztott adathalmaz megtekintésére, vizualizációjára. Ha nem választódik ki előre az adathalmaz, akkor alapértelmezetten a Sapipin adatgyűjtemény kerül megjelenítésre. A felhasználó különböző diagramokat tekinthet meg az adott halmazról (vonaldiagramok, hisztogramok, claszterek). Ezek a diagramok tükrözik az összes felhasználó teljesítményét; akadnak olyanok, amelyek felhasználóra szabottak és csupán egy felhasználó teljesítményről adnak információt.",
-            "performance": "A teljesítményelemzés opciónál a felhasználó kiválaszthatja a neki tetsző detektortkategóriát, majd a kategóriából lehetősége adódik egy konkrét detektor kiválasztására. A továbbiakban megnézheti annak teljesítményét ROC görbék által, valamint az AUC és EER értékekből."
+            "data": "Az adatelemzési funkcionalitás a kiválaszott adathalmaz függvényében két típusú diagramot mutat be. Az egyik a jellemzők hisztogramja, mely az összes felhasználó értéket igénybe véve készül; a másik a gépelési ritmusok vonaldigramja, mely kimondottam egy felhasználó gépelési adataiból épül fel. Alapértelmezettem a hisztogramok kerülnek betöltésre és a sapipin a standard adathalmaz.",
+            "performance": "A teljesítményelemzés opciónál két lehetőség adott: Detektor kateória és Detektor menüpont. Az elsőt választva adottak az adathalmazok és a detektor kategóriák. A  felhasználó kedvére válaszhat egy adathalmazt és egy kategóriát és ezek függvényében megketintheti az adott kategóriában lévő detektorok teljesítményét ROC görgék által a kiválasztott adathalmazra. Továbbá egy más típusú diagramot is szemügyre vehet, mégpedig dobozdiagramot, amelyek szintén a detektorok teljesítményét tükrözik. Az alapértelmezetten kiválasztott adathalmaz a sapipin, a detektor kategória pedig a Lineáris modellek. Abban az esetben, hogy ha a Detektor almenüpontot választja, akkor az oldalon eltünnek az adathalmazok, csupán a kategóriában lévő detektorok közül választhat a felhaszbnáló ( bármelyik detektort ). A megjelenő dobozdiagramok a kiválaszott detektor AUC , majd EER értékeit személtetik mint az öt adathalmazra, összehasonlítva ezáltal a teljesítményt. Az alapértelmezettem kiválaszott detektor a PCA."
         },
         "datasets":{
             "title": "Adathalmazok ismertetése" 

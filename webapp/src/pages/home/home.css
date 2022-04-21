@@ -11,10 +11,14 @@
   
 .content #scope{
     margin: 30px;
-    margin-left: 25%;
+    padding-left: 30%;
 }
 
 .list{
     margin: 15px;
     margin-left: 10%;
+}
+
+.text{
+    margin: 50px;
 }
