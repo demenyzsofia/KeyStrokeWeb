@@ -15,7 +15,8 @@ const initialState = {
   diagramType: DIAGRAMTYPE.HIST,
   dataset : DATASET.SAPIPIN,
   detectorGroup : DETECTORCATEGORY.LINEAR,
-  detector: DETECTOR.PCA
+  detector: DETECTOR.PCA,
+  color: "black"
 };
 const { useGlobalState } = createGlobalState(initialState);
 

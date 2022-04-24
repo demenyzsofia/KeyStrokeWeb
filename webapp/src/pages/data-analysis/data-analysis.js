@@ -19,6 +19,7 @@ const DataAnalysis = () => {
     const [dataset] =  useGlobalState('dataset');
     const [diagramType] =  useGlobalState('diagramType');
     const [images, setImages] =   useState();
+
     
     useEffect(() =>{
         getImages(dataset).then(data => {
