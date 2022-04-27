@@ -12,7 +12,7 @@
     padding-left: 0;
 } 
   
-.detectorGroupSidebar a:hover {
+.detectorGroupSidebar a:hover, .detectorGroupSidebar a.selected {
     background-color: #bababa;
     color: #454545;
     padding: 10px;
@@ -25,4 +25,8 @@
 
 #detectorGroupTitle{
     font-size: 20px;
+}
+
+.detectorGroupSidebar a.selected {
+    background-color: #DCDCDC;
 }

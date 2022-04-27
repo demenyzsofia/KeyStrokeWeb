@@ -47,7 +47,7 @@
 
 }
 
-.detectorSidebar ul li:hover{
+.detectorSidebar ul li:hover, .detectorSidebar ul li.selected{
     background-color: #bababa;
     color: #454545;
     padding: 10px 20px;
@@ -56,3 +56,7 @@
     text-align: center;
     display: inline-block;
 } 
+
+.detectorSidebar ul li.selected{
+    background-color: #DCDCDC;
+}

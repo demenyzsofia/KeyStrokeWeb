@@ -49,7 +49,7 @@ const PerformanceAnalysisDetector = () => {
             modules={[Autoplay, Pagination, Navigation]}
             className="mydetectorSwiper">
             {images && renderImages().map((src) => {
-                return <SwiperSlide>{src}</SwiperSlide> ;
+                return <SwiperSlide  className="swiperslide">{src}</SwiperSlide> ;
                 })}
         </Swiper>
         </>

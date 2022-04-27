@@ -59,8 +59,8 @@ const PerformanceAnalysisDetectorGroup = () => {
             modules={[Autoplay, Pagination, Navigation]}
             className="myDetectorGroupSwiper">
            
-            <SwiperSlide> {images && renderRoccurveImages()[detectorGroup]}</SwiperSlide> 
-            <SwiperSlide> {images && renderBoxImages()[detectorGroup]}</SwiperSlide> 
+            <SwiperSlide  className="swiperslide"> {images && renderRoccurveImages()[detectorGroup]}</SwiperSlide> 
+            <SwiperSlide  className="swiperslide"> {images && renderBoxImages()[detectorGroup]}</SwiperSlide> 
         </Swiper>
         </>
        

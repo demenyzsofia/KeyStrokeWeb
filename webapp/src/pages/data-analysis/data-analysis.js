@@ -55,7 +55,7 @@ const DataAnalysis = () => {
             modules={[Autoplay, Pagination, Navigation]}
             className="myDataSwiper">
             {images && renderImages().map((src) => {
-                return <SwiperSlide >{src}</SwiperSlide> ;
+                return <SwiperSlide className="swiperslide">{src}</SwiperSlide> ;
                 })}
         </Swiper>
         </>

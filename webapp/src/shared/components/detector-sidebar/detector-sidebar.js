@@ -15,24 +15,24 @@ const DetectorSidebar = () => {
           <div className="detectorSidebar">
             <h4>{t("detectorGroups.linear")}</h4>
             <ul>
-              <li onClick={() => setActive(DETECTOR.PCA)}>PCA</li>
-              <li onClick={() => setActive(DETECTOR.OCSVM)}>OCSVM</li>
+              <li className={active === DETECTOR.PCA && "selected"} onClick={() => setActive(DETECTOR.PCA)}>PCA</li>
+              <li className={active === DETECTOR.OCSVM && "selected"} onClick={() => setActive(DETECTOR.OCSVM)}>OCSVM</li>
             </ul>
             <h4>{t("detectorGroups.outlierEnsembles")}</h4>
             <ul>
-              <li onClick={() => setActive(DETECTOR.IFOREST)}>IForest</li>
-              <li onClick={() => setActive(DETECTOR.FB)}>FB</li>
+              <li className={active === DETECTOR.IFOREST && "selected"}  onClick={() => setActive(DETECTOR.IFOREST)}>IForest</li>
+              <li className={active === DETECTOR.FB && "selected"} onClick={() => setActive(DETECTOR.FB)}>FB</li>
             </ul>
             <h4>{t("detectorGroups.probabilistic")}</h4>
             <ul>
-              <li onClick={() => setActive(DETECTOR.ABOD)}>ABOD</li>
-              <li onClick={() => setActive(DETECTOR.COPOD)}>COPOD</li>
+              <li className={active === DETECTOR.ABOD && "selected"} onClick={() => setActive(DETECTOR.ABOD)}>ABOD</li>
+              <li className={active === DETECTOR.COPOD && "selected"} onClick={() => setActive(DETECTOR.COPOD)}>COPOD</li>
             </ul>
           <h4>{t("detectorGroups.proximityBased")}</h4>
             <ul>
-              <li onClick={() => setActive(DETECTOR.LOF)}>LOF</li>
-              <li onClick={() => setActive(DETECTOR.KNN)}>kNN</li>
-              <li onClick={() => setActive(DETECTOR.HBOS)}>HBOS</li>
+              <li className={active === DETECTOR.LOF && "selected"} onClick={() => setActive(DETECTOR.LOF)}>LOF</li>
+              <li className={active === DETECTOR.KNN && "selected"} onClick={() => setActive(DETECTOR.KNN)}>kNN</li>
+              <li className={active === DETECTOR.HBOS && "selected"} onClick={() => setActive(DETECTOR.HBOS)}>HBOS</li>
             </ul>
             </div>
         </div>
