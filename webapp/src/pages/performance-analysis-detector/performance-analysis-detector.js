@@ -39,11 +39,12 @@ const PerformanceAnalysisDetector = () => {
             spaceBetween={30}
             centeredSlides={true}
             autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
+                delay: 5000,
+                disableOnInteraction: true,
+                pauseOnMouseEnter: true,
             }}
             pagination={{
-            clickable: true,
+                clickable: true,
             }}
             navigation={true}
             modules={[Autoplay, Pagination, Navigation]}

@@ -14,26 +14,26 @@ const DetectorSidebar = () => {
           <h2 id="detectors">Detektorok</h2>
           <div className="detectorSidebar">
             <h4>{t("detectorGroups.linear")}</h4>
-            <ul>
-              <li className={active === DETECTOR.PCA && "selected"} onClick={() => setActive(DETECTOR.PCA)}>PCA</li>
-              <li className={active === DETECTOR.OCSVM && "selected"} onClick={() => setActive(DETECTOR.OCSVM)}>OCSVM</li>
-            </ul>
+             <div className='group'>
+              <a className={active === DETECTOR.PCA && "selected"} onClick={() => setActive(DETECTOR.PCA)}>PCA</a>
+              <a className={active === DETECTOR.OCSVM && "selected"} onClick={() => setActive(DETECTOR.OCSVM)}>OCSVM</a>
+            </div>
             <h4>{t("detectorGroups.outlierEnsembles")}</h4>
-            <ul>
-              <li className={active === DETECTOR.IFOREST && "selected"}  onClick={() => setActive(DETECTOR.IFOREST)}>IForest</li>
-              <li className={active === DETECTOR.FB && "selected"} onClick={() => setActive(DETECTOR.FB)}>FB</li>
-            </ul>
+            <div  className='group'>
+              <a className={active === DETECTOR.IFOREST && "selected"}  onClick={() => setActive(DETECTOR.IFOREST)}>IForest</a>
+              <a className={active === DETECTOR.FB && "selected"} onClick={() => setActive(DETECTOR.FB)}>FB</a>
+            </div>
             <h4>{t("detectorGroups.probabilistic")}</h4>
-            <ul>
-              <li className={active === DETECTOR.ABOD && "selected"} onClick={() => setActive(DETECTOR.ABOD)}>ABOD</li>
-              <li className={active === DETECTOR.COPOD && "selected"} onClick={() => setActive(DETECTOR.COPOD)}>COPOD</li>
-            </ul>
+            <div  className='group'>
+              <a className={active === DETECTOR.ABOD && "selected"} onClick={() => setActive(DETECTOR.ABOD)}>ABOD</a>
+              <a className={active === DETECTOR.COPOD && "selected"} onClick={() => setActive(DETECTOR.COPOD)}>COPOD</a>
+            </div>
           <h4>{t("detectorGroups.proximityBased")}</h4>
-            <ul>
-              <li className={active === DETECTOR.LOF && "selected"} onClick={() => setActive(DETECTOR.LOF)}>LOF</li>
-              <li className={active === DETECTOR.KNN && "selected"} onClick={() => setActive(DETECTOR.KNN)}>kNN</li>
-              <li className={active === DETECTOR.HBOS && "selected"} onClick={() => setActive(DETECTOR.HBOS)}>HBOS</li>
-            </ul>
+            <div  className='group'>
+              <a className={active === DETECTOR.LOF && "selected"} onClick={() => setActive(DETECTOR.LOF)}>LOF</a>
+              <a className={active === DETECTOR.KNN && "selected"} onClick={() => setActive(DETECTOR.KNN)}>kNN</a>
+              <a className={active === DETECTOR.HBOS && "selected"} onClick={() => setActive(DETECTOR.HBOS)}>HBOS</a>
+            </div>
             </div>
         </div>
 }

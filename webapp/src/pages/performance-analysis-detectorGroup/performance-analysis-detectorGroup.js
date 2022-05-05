@@ -46,17 +46,18 @@ const PerformanceAnalysisDetectorGroup = () => {
         <h2 id="performanceTitle">Teljesítményelemzés</h2>
         <>
         <Swiper
-            spaceBetween={30}
-            centeredSlides={true}
-            autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-            }}
-            pagination={{
-            clickable: true,
-            }}
-            navigation={true}
-            modules={[Autoplay, Pagination, Navigation]}
+           spaceBetween={30}
+           centeredSlides={true}
+           autoplay={{
+               delay: 5000,
+               disableOnInteraction: true,
+               pauseOnMouseEnter: true,
+           }}
+           pagination={{
+               clickable: true,
+           }}
+           navigation={true}
+           modules={[Autoplay, Pagination, Navigation]}
             className="myDetectorGroupSwiper">
            
             <SwiperSlide  className="swiperslide"> {images && renderRoccurveImages()[detectorGroup]}</SwiperSlide> 
