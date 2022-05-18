@@ -11,14 +11,17 @@ import { DETECTORCATEGORY } from './shared/constants/detector-groups';
 import { DETECTOR } from './shared/constants/detectors';
 
 
+
 const initialState = {
   diagramType: DIAGRAMTYPE.HIST,
   dataset : DATASET.SAPIPIN,
   detectorGroup : DETECTORCATEGORY.LINEAR,
   detector: DETECTOR.PCA,
-  color: "black"
+  color: "black",
+  language: "hu"
 };
 const { useGlobalState } = createGlobalState(initialState);
+
 
 ReactDOM.render(
   <React.StrictMode>
@@ -28,6 +31,7 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

@@ -1,26 +1,90 @@
 {
     "pages": { 
         "home": {
-            "title": "Webalkalmazás célja" ,
-            "introduction": "Az alkalmazás célja, hogy a felhasználó betekintést nyerjen a mesterséges intelligencia, azon belül a gépi tanulás világába. Ez a kis oldal szemlélteni a jelszó gépelési ritmusok különböző detektorokkal való tanításának eredményességét.",
-            "content": "Öt adathalmaz áll rendelkezésünkre, melyek különböző számú felhasználó adatait tartalmazzák. Ezekről az adathalmazokról bővebben olvashatszt az Adathalmazok menüpont alatt. A felhasználó tehát öt adathalmazból választhatja ki, hogy a továbbiakban melyikkel szeretne dolgozni, melyiket szeretné megtekinteni. Ezt követően két fő funkcionalitást tudunk elkülöníteni, melyek további lehetőségeket biztosítanak az alfunkcionalitások megtekintésére, kipróbálására. Ez a két fő egység:", 
+            "title": "Goal of the webapplication" ,
+            "introduction": "The app provides insights into password typing rhythms, which can be viewed from five different perspectives. ",
+            "content1": "We have five data sets with typing rhythms that contain data for different numbers of users. You can read more about these datasets under the ",
+            "datasets": "Datasets",
+            "content2": "  menu item. The user can then choose from five data sets to work with and view. Two main functionalities can be distinguished:", 
             "listing": {
-                "first": "1. Adatelemzési funkcionalitás",
-                "second": "2. Teljesítményelemzés"
+                "dataAnalysis": "Data analysis",
+                "performanceAnalysis": "Performance analysis"
             },
-            "end": "Az adatelemzési funkcionalitás lehetőséget ad az előre kiválasztott adathalmaz megtekintésére, vizualizációjára. A felhasználó különböző diagramokat tekinthet meg az adott halmazról (vonaldiagramok, hisztogramok, claszterek). Ezek a diagramok tükrözik az összes user teljesítményét; akadnak olyanok, amelyek felhasználóra szabottak és csupán egy felhasználó teljesítményről adnak információt. Egyes adathalmazoknál ezek a diagramok előre el vannak készítve, míg másoknál helyben generálódnak. A teljesítményelemzés opciónál a felhasználó kiválaszthatja a neki tetsző detektort és megnézheti annak teljesítményét: boxplot a detektor által számított AUC és EER értékekből; ROC görbe; a detektor által számított értékek egyes felhasználóknál."
+            "data": "The data analysis functionality presents two types of charts depending on the selected dataset. One is a histogram of features, which is constructed using all user values; the other is a line graph of typing rhythms, which is constructed using the typing data of one user. By default, the histograms are loaded and sapipin is the default dataset.",
+            "performance": "The performance analysis option gives you two options: Detector category and Detector menu option. The first option gives you the datasets and detector categories. The user can select a dataset and a category and, depending on these, can plot the performance of the detectors in that category by ROC roll for the selected dataset. Furthermore, he can also view another type of chart, namely box plots, which also reflect the performance of detectors. The dataset selected by default is sapipin and the detector category is Linear Models. In the case where the Detector sub-menu item is selected, the datasets disappear from the page, leaving only the detectors in the category for the user to choose from ( any detector ). The box plots displayed visualise the AUC , then EER values of the selected detector as the five datasets, thus comparing performance. The default selected detector is PCA."
+        },
+        "datasets":{
+            "title": "Description of datasets" 
+        },
+        "basic-concepts":{
+            "title": "Basic concepts, notations",
+            "subtitle1" : "Basic concepts",
+            "listing1" : {
+                "anomalyDetection": "Anomaly detection: a technique that uses various algorithms to determine how much a given piece of data deviates from a model generated from previously collected data",
+                "class": "Classification: we classify different samples into predefined classes",
+                "tp": "True positive (TP: true positive): the number of positive cases correctly predicted by the model.",
+                "fn": "False negative (FN): the number of positive cases that the model predicts as false negatives.",
+                "fp": "False positive (FP): the number of negative cases that the model falsely predicts as positive.",
+                "tn": "True negative (TN: true negative): the number of negative cases correctly predicted by the classification model",
+                "precision": "Accuracy = TP/(TP+FP): shows what proportion of those identified as positive were actually positive" ,
+                "hist": "Graphical representation of metrically scaled properties of a histogram",
+                "box": "A box plot is a method for graphically representing the localization, propagation and skewness groups of numerical data through quartiles."
+            },
+            "subtitle2" : "Notations",
+            "listing2":{
+                "auc": "AUC - Area Under the ROC Curve; expresses the extent to which positive samples are prioritised over negative ones during testing.",
+                "eer": "EER - Equal Error Rate",
+                "ht": "HT - Hold Time: time between pressing and releasing a key",
+                "dd": "DD - Down-Down: time between two consecutive key presses",
+                "ud": "UD - Up-Down: time between releasing a key and pressing the next key",
+                "tpr": "TPR: True positive rate = TP/(total number of positives)",
+                "fpr": "FPR: False positive rate: FP/(total number of negatives)",
+                "fnr": "FNR: False negative rate: FN/(total number of positives)",
+                "tnr": "TNR: True negatives ratio: TN/(total number of negatives)"
+            }
+        },
+        "data-analysis":{
+            "title" : "Data analysis"
         }
-
+       
     },
 
     "shared": {
-        "buttons": {
-            "next": "kovetkezo"
+        "header":{
+            "title": "Anomaly detection for password typing"
         },
         "menu": {
-            
+            "listing":{
+                "home": "Home",
+                "datasets": "Datasets",
+                "basicConcepts": "Basic concepts",
+                "dataAnalysis": "Data analysis",
+                "performanceAnalysis": "Performance analysis"
+            },
+            "submenu":{
+                "detectorgroup": "Detector category",
+                "detector": "Detector"
+            }
+        },
+        "datasidebar":{
+            "hist": "Histograms",
+            "typing": "Typing rhythms"
+        },
+        "sidebar":{
+            "title": "Datasets"
+        },
+        "footer":{
+            "title": "© 2022 - Demény Zsófia - Bachelor thesis"
         }
+    },
+    "detectorGroups": {
+        "linear": "Linear models",
+        "proximityBased": "Proximity-based models",
+        "probabilistic": "Probability models",
+        "outlierEnsembles": "Outlier Ensemble models"
     }
+
+
 
     
 }
