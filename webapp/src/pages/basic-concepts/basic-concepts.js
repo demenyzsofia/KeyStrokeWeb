@@ -1,11 +1,17 @@
+import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import "../../translations/i18n";
 import keystroke from "../../images/keystroke.png"
 import box from "../../images/box.png"
 import './basic-concepts.css'
+import i18n from "../../translations/i18n";
 
 const BasicConcepts = () => {
     const { t } = useTranslation();
+
+    useEffect(() => {
+        i18n.changeLanguage(localStorage.getItem('lng') != null ? localStorage.getItem('lng') : 'hu');
+    }, []);
     return <div className="content">
             <h2 id="basic">{t('pages.basic-concepts.title')}</h2>
             <p className='subtitle'><b>{t('pages.basic-concepts.subtitle1')}</b></p>

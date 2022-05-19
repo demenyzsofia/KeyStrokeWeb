@@ -45,6 +45,9 @@
         },
         "data-analysis":{
             "title" : "Adatelemzés"
+        },
+        "performance-analysis":{
+            "title" : "Teljesítményelemzés"
         }
        
     },
@@ -67,6 +70,7 @@
             }
         },
         "datasidebar":{
+            "title" : "Diagramok",
             "hist": "Hisztogramok",
             "typing": "Gépelési ritmusok"
         },
@@ -78,12 +82,13 @@
         }
     },
     "detectorGroups": {
+        "title" : "Detektor kategóriák",
+        "title2": "Detektorok",
         "linear": "Lineáris modellek",
         "proximityBased": "Közelségalapú modellek",
         "probabilistic": "Valószínűségi modellek",
         "outlierEnsembles": "Ensemble típusú modellek"
     }
-
 
 
     

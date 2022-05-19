@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import "../../translations/i18n";
@@ -13,6 +13,7 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 
 import "./data-analysis.css"
 import { useGlobalState } from "../..";
+import i18n from "../../translations/i18n";
 
 const DataAnalysis = () => {
     const { t } = useTranslation(); 
@@ -24,7 +25,8 @@ const DataAnalysis = () => {
     useEffect(() =>{
         getImages(dataset).then(data => {
                 setImages(data.data);
-        }).catch(err => {})
+        }).catch(err => {});
+        i18n.changeLanguage(localStorage.getItem('lng') != null ? localStorage.getItem('lng') : 'hu');
         }, [dataset]);
     
 

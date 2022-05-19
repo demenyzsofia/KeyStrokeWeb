@@ -1,9 +1,16 @@
+import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import "../../translations/i18n";
+import i18n from "../../translations/i18n";
 import './datasets.css'
 
 const Datasets = () => {
     const { t } = useTranslation();
+
+    useEffect(() => {
+        i18n.changeLanguage(localStorage.getItem('lng') != null ? localStorage.getItem('lng') : 'hu');
+    }, []);
+
     return <div class="datasetContent">
             <h2 id="data">{t('pages.datasets.title')}</h2>
             <table className='table'>

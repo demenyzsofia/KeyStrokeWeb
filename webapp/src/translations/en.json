@@ -45,6 +45,9 @@
         },
         "data-analysis":{
             "title" : "Data analysis"
+        },
+        "performance-analysis":{
+            "title" : "Performance Analysis"
         }
        
     },
@@ -67,6 +70,7 @@
             }
         },
         "datasidebar":{
+            "title" : "Charts",
             "hist": "Histograms",
             "typing": "Typing rhythms"
         },
@@ -78,13 +82,13 @@
         }
     },
     "detectorGroups": {
+        "title" : "Detector Categories",
+        "title2": "Detectors",
         "linear": "Linear models",
         "proximityBased": "Proximity-based models",
         "probabilistic": "Probability models",
         "outlierEnsembles": "Outlier Ensemble models"
     }
-
-
 
     
 }

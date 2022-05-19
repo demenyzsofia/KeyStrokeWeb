@@ -11,19 +11,21 @@ import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper";
 import { DATASET } from "../../shared/constants/datasets";
 import { useGlobalState } from "../..";
+import i18n from "../../translations/i18n";
 
 
 const PerformanceAnalysisDetectorGroup = () => {
     const [dataset] =  useGlobalState('dataset');
     const [detectorGroup] =  useGlobalState('detectorGroup');
     const [images, setImages] = useState()
-
+    const { t } = useTranslation(); 
 
     useEffect(() =>{
         getImages(dataset).then(data => {
             console.log(data.data)
             setImages(data.data);
-        }).catch(err => {})
+        }).catch(err => {});
+        i18n.changeLanguage(localStorage.getItem('lng') != null ? localStorage.getItem('lng') : 'hu');
     }, [detectorGroup, dataset]);
 
 
@@ -43,7 +45,7 @@ const PerformanceAnalysisDetectorGroup = () => {
     
     
     return  <div className="content">
-        <h2 id="performanceTitle">Teljesítményelemzés</h2>
+        <h2 id="performanceTitle">{t("pages.performance-analysis.title")}</h2>
         <>
         <Swiper
            spaceBetween={30}

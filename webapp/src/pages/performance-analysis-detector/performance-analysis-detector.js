@@ -10,18 +10,21 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper";
 import { useGlobalState } from "../..";
+import i18n from "../../translations/i18n";
 
 
 const PerformanceAnalysisDetector = () => {
     const [detector] =  useGlobalState('detector');
     const [images, setImages] = useState();
+    const { t } = useTranslation(); 
 
     useEffect(() =>{
         getDetectorsBoxImages().then(data => {
             setImages(data.data);
         }).catch(err => {
             console.log(err)
-        })
+        });
+        i18n.changeLanguage(localStorage.getItem('lng') != null ? localStorage.getItem('lng') : 'hu');
     }, []);
 
     const renderImages = () => {
@@ -33,7 +36,7 @@ const PerformanceAnalysisDetector = () => {
     
     
     return  <div className="content">
-        <h2 id="performanceTitle">Teljesítményelemzés</h2>
+        <h2 id="performanceTitle">{t("pages.performance-analysis.title")}</h2>
         <>
         <Swiper
             spaceBetween={30}

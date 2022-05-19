@@ -1,9 +1,15 @@
+import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import "../../translations/i18n";
+import i18n from "../../translations/i18n";
 import "./home.css"
 
 const Home = () => {
     const { t } = useTranslation(); 
+
+    useEffect(() => {
+        i18n.changeLanguage(localStorage.getItem('lng') != null ? localStorage.getItem('lng') : 'hu');
+    }, []);
     return <div className="content">
                 <h2 id="scope">{t("pages.home.title")}</h2>
                 <div className="text">

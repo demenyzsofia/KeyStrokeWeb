@@ -11,7 +11,7 @@ const DetectorSidebar = () => {
   const [active, setActive] =  useGlobalState('detector');
 
   return <div className="detectorsSidebar">
-          <h2 id="detectors">Detektorok</h2>
+          <h2 id="detectors">{t("detectorGroups.title2")}</h2>
           <div className="detectorSidebar">
             <h4>{t("detectorGroups.linear")}</h4>
              <div className='group'>
