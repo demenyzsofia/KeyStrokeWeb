@@ -17,6 +17,7 @@ const PerformanceAnalysisDetector = () => {
     const [detector] =  useGlobalState('detector');
     const [images, setImages] = useState();
     const { t } = useTranslation(); 
+    const [language, setLanguage] = useGlobalState('language');
 
     useEffect(() =>{
         getDetectorsBoxImages().then(data => {
@@ -25,7 +26,7 @@ const PerformanceAnalysisDetector = () => {
             console.log(err)
         });
         i18n.changeLanguage(localStorage.getItem('lng') != null ? localStorage.getItem('lng') : 'hu');
-    }, []);
+    }, [language]);
 
     const renderImages = () => {
         return images[detector].map(image => {

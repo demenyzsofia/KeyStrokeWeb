@@ -19,7 +19,8 @@ const DataAnalysis = () => {
     const { t } = useTranslation(); 
     const [dataset] =  useGlobalState('dataset');
     const [diagramType] =  useGlobalState('diagramType');
-    const [images, setImages] =   useState();
+    const [images, setImages] =  useState();
+    const [language, setLanguage] = useGlobalState('language');
 
     
     useEffect(() =>{
@@ -27,7 +28,7 @@ const DataAnalysis = () => {
                 setImages(data.data);
         }).catch(err => {});
         i18n.changeLanguage(localStorage.getItem('lng') != null ? localStorage.getItem('lng') : 'hu');
-        }, [dataset]);
+        }, [dataset, language]);
     
 
     const renderImages = () => {

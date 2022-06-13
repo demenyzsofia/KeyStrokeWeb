@@ -4,4 +4,10 @@ const instance = axios.create({
     baseURL: "http://localhost:5000/api"
 })
 
+instance.interceptors.request.use((config) => {
+    const language = localStorage.getItem('lng') || 'hu';
+    config.headers['language'] = language;
+    return config;
+})
+
 export default instance;

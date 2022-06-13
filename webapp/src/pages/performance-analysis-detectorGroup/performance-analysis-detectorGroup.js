@@ -19,6 +19,7 @@ const PerformanceAnalysisDetectorGroup = () => {
     const [detectorGroup] =  useGlobalState('detectorGroup');
     const [images, setImages] = useState()
     const { t } = useTranslation(); 
+    const [language, setLanguage] = useGlobalState('language');
 
     useEffect(() =>{
         getImages(dataset).then(data => {
@@ -26,7 +27,7 @@ const PerformanceAnalysisDetectorGroup = () => {
             setImages(data.data);
         }).catch(err => {});
         i18n.changeLanguage(localStorage.getItem('lng') != null ? localStorage.getItem('lng') : 'hu');
-    }, [detectorGroup, dataset]);
+    }, [detectorGroup, dataset, language]);
 
 
 
@@ -41,7 +42,6 @@ const PerformanceAnalysisDetectorGroup = () => {
             return <div className="detectorGroupImages"><img src={'http://localhost:5000/public/images/' + image} /></div>
         })
     }
-    
     
     
     return  <div className="content">
