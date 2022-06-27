@@ -1,11 +1,11 @@
 {
     "pages": { 
         "home": {
-            "title": "Goal of the webapplication" ,
-            "introduction": "The app provides insights into password typing rhythms, which can be viewed from five different perspectives. ",
-            "content1": "We have five data sets with typing rhythms that contain data for different numbers of users. You can read more about these datasets under the ",
+            "title": "Goal of the web application" ,
+            "introduction": "The app provides insights about password typing rhythms, which can be viewed from five different perspectives. ",
+            "content1": "We have five datasets with typing rhythms that contain data for different numbers of users. You can read more about these datasets under the ",
             "datasets": "Datasets",
-            "content2": "  menu item. The user can then choose from five data sets to work with and view. Two main functionalities can be distinguished:", 
+            "content2": "  menu item. The user can then choose from five datasets to work with and view. Two main functionalities can be distinguished:", 
             "listing": {
                 "dataAnalysis": "Data analysis",
                 "performanceAnalysis": "Performance analysis"
@@ -23,7 +23,7 @@
                 "anomalyDetection": "Anomaly detection: a technique that uses various algorithms to determine how much a given piece of data deviates from a model generated from previously collected data",
                 "class": "Classification: we classify different samples into predefined classes",
                 "tp": "True positive (TP: true positive): the number of positive cases correctly predicted by the model.",
-                "fn": "False negative (FN): the number of positive cases that the model predicts as false negatives.",
+                "fn": "False negative (FN): the number of positive cases that the model predicts as false.",
                 "fp": "False positive (FP): the number of negative cases that the model falsely predicts as positive.",
                 "tn": "True negative (TN: true negative): the number of negative cases correctly predicted by the classification model",
                 "precision": "Accuracy = TP/(TP+FP): shows what proportion of those identified as positive were actually positive" ,

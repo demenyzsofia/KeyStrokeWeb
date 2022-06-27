@@ -1,23 +1,10 @@
-/* .content {
-    flex-grow: 6;
-    margin: 30px;
-    
-}
-
-.content p{
-    padding-left:1em; 
-    text-indent :3em;
-}
   
-.content #dataTitle{
+#dataTitle{
     margin: 30px;
-    margin-left: 25%;
-} */
+    margin-left: 35%;
+} 
 
 .myDataSwiper{
     height: 455px !important;
 }
 
-.dataImages img{
-
-}

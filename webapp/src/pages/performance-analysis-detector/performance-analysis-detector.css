@@ -1,6 +1,8 @@
- /* .detectorImages img{
-    padding-left: 20px;
-} */
+#performanceTitle{
+      margin: 30px;
+      margin-left: 30%;
+  }
+
 
 .mydetectorSwiper{
    height: 555px !important;
